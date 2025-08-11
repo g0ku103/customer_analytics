@@ -1,0 +1,7 @@
+Total customers: 4338. High-Value customers: 347 (8.0%), At-Risk: 635 (14.6%).
+Cluster 0 has 3060 customers with average revenue of $1352.75.
+Cluster 1 has 1061 customers with average revenue of $476.42.
+Cluster 3 has 204 customers with average revenue of $12690.50.
+Cluster 2 has 13 customers with average revenue of $127187.96.
+Average actual revenue: $2048.69, Average predicted revenue: $2116.68. Difference suggests 3.3% change.
+Recommendation: Invest in strategies to sustain predicted revenue growth.
