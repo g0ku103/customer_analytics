@@ -98,11 +98,18 @@ if __name__ == "__main__":
         os.makedirs("visualizations", exist_ok=True)
         # Train and evaluate models
         lr_model, rf_model, X_test, y_test, lr_pred, rf_pred = train_and_evaluate_model(features, target)
+        # Save predictions
+        test_df = pd.DataFrame({
+            'CustomerID': pd.read_csv("data/processed/clustered_rfm_data.csv")['CustomerID'].iloc[X_test.index],
+            'Actual_Monetary': y_test,
+            'Predicted_Linear': lr_pred,
+            'Predicted_RandomForest': rf_pred
+        })
+        test_df.to_csv("data/processed/forecast_data.csv", index=False)
+        print("Forecast data saved to data/processed/forecast_data.csv")
         # Visualize predictions
         visualize_predictions(X_test, y_test, lr_pred, rf_pred)
         # Save models
         save_model_and_results(lr_model, rf_model)
-
-
 
 
