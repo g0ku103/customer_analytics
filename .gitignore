@@ -1,6 +1,5 @@
-venv/
 __pycache__/
 *.pyc
-.env
-*.xlsx
-*.csv
+.venv/
+data/raw/
+data/processed/*.csv
