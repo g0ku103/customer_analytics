@@ -22,7 +22,7 @@ with tab1:
     st.image("visualizations/monthly_revenue.png", caption="Monthly Revenue Trend")
     st.image("visualizations/country_revenue.png", caption="Top 10 Countries by Revenue")
     # Load customer metrics summary
-    df_eda = pd.read_csv("data/processed/cleaned_data.csv")
+    df_eda = pd.read_csv("data/public/cleaned_data.csv")
     st.dataframe(df_eda.head())
     st.write("Customer Metrics Summary from EDA:")
     customer_metrics = df_eda.groupby('CustomerID').agg({
@@ -35,7 +35,7 @@ with tab1:
 with tab2:
     st.header("RFM Analysis")
     # Load RFM data
-    df_rfm = pd.read_csv("data/processed/rfm_data.csv")
+    df_rfm = pd.read_csv("data/public/rfm_data.csv")
     st.dataframe(df_rfm.head())
     st.image("visualizations/rfm_segments.png", caption="RFM Segment Distribution")
     st.write("RFM Segment Counts:")
@@ -44,7 +44,7 @@ with tab2:
 with tab3:
     st.header("Clustering")
     # Load clustered data
-    df_clustered = pd.read_csv("data/processed/clustered_rfm_data.csv")
+    df_clustered = pd.read_csv("data/public/clustered_rfm_data.csv")
     st.dataframe(df_clustered.head())
     st.image("visualizations/elbow_plot.png", caption="Elbow Method for Optimal Clusters")
     st.image("visualizations/customer_clusters.png", caption="Clusters by Recency vs. Monetary")
@@ -54,7 +54,7 @@ with tab3:
 with tab4:
     st.header("Revenue Forecasting")
     # Load forecast data
-    df_forecast = pd.read_csv("data/processed/forecast_data.csv")
+    df_forecast = pd.read_csv("data/public/forecast_data.csv")
     st.dataframe(df_forecast.head())
     st.image("visualizations/revenue_predictions.png", caption="Actual vs. Predicted Revenue")
     st.write("Model Performance (from Step 7):")
