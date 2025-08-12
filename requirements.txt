@@ -76,3 +76,10 @@ urllib3==2.5.0
 watchdog==6.0.0
 xgboost==3.0.3
 zstandard==0.23.0
+streamlit
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+joblib
